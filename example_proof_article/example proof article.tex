@@ -1,0 +1,180 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{commath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{setspace}
+\doublespacing
+\title{the proofs we know and love}
+\begin{document}
+\today
+\begin{center}
+The Proofs We Know and Love 
+\end{center}
+\paragraph{Introduction}
+In this paper, the author will be introducing two proofs: the difference of two squares and absolute value of two numbers equal to each other is less than \(\varepsilon \). We will go through both proofs and find that the difference of two squares introduces factoring and distributing to a more useful degree. It will also allow us to find solutions to quadratic equations when we first meet them. The difference of two squares problem is shown:
+
+\paragraph{Theorem K:} 
+For every \(x,a,\) we have that:
+
+\[(x-a)(x+a) = {x}^{2} - {a}^{2} \]
+We will also go through the absolute value proof, which will introduce us to a basic definition of limits in the future, as \(\varepsilon \) has many applications in proofs. The absolute value problem is:
+\paragraph{Theorem 1.4:}
+Two real numbers \(a\) and \(b\) are equal if and only if for every real number \(\varepsilon  > 0 \) it follows that \(\left| a-b \right| < \varepsilon  \). \newline
+
+Both of these theorems have uses in proving more complicated proofs later on in mathematics. We will start proving the first problem: difference of two squares.
+
+
+\begin{proof}
+Theorem K: Let \(z=(x-a)\),
+\begin{equation}
+(x-a)(x+a) = (x-a)(x+a)
+\end{equation}
+Then we substitute in \(z\) for \((x-a)\),
+
+\begin{equation}
+z(x+a) = (x-a)(x+a)
+\end{equation}
+Using the distributive axiom, we distribute the \(z\), resulting in
+
+\begin{equation}
+zx + za = (x-a)(x+a)
+\end{equation}
+We then substitute in back the \((x-a)\) for \(z\),
+
+\begin{equation}
+(x-a)x + (x-a)a = (x-a)(x+a)
+\end{equation}
+The purpose for the \(z\)-substituion was to show that we could distribute something like \((x-a)\), a multi-variable part in the equation. Furthermore, we will continue by distributing the \(x\) and \(a\), respectively.
+
+\begin{equation}
+xx-ax + ax - aa = (x-a)(x+a)
+\end{equation}
+We then apply the additive inverse property, 
+
+\begin{equation}
+xx-0-aa = (x-a)(x+a)
+\end{equation}
+\begin{equation}
+xx-aa = (x-a)(x+a)
+\end{equation}
+The definition of a square is \(\forall n \exists \mathbb{R} \) such that \(nn \implies {n}^{2}\),
+
+\begin{equation}
+x^2 - a^2 = (x-a)(x+a)
+\end{equation}
+\end{proof}
+
+\paragraph{}
+After this, we have proven the fact that \({x}^{2} - {a}^{2} = (x-a)(x+a) \), which gives us a glimpse of future quadratic equations. We will now prove the other theorem involving absolute values.
+
+\begin{proof}
+Theorem 1.4: Let \(a=b\) and \(\varepsilon > 0\),
+
+\begin{equation}
+a=b
+\end{equation}
+We then apply the additive inverse of \(b\) to both sides using the equality axiom.
+
+\begin{equation}
+a+(-b) = b + (-b)
+\end{equation}
+This simplifies to, 
+
+
+\begin{equation}
+a - b = 0
+\end{equation}
+The definition of absolute value follows:
+
+\[
+ \abs{x}  =
+  \begin{cases} 
+      \hfill x    \hfill & \text{ if $x \geq$ 0} \\
+      \hfill -x \hfill & \text{ if $x < 0 $} \\
+  \end{cases}
+\]
+Using the definition of absolute value, we can say since \(a-b = 0\) that,
+
+\begin{equation}
+|a-b| = 0
+\end{equation}
+And since we were given that \( \varepsilon > 0\). According to the axiom where if \(x > y\) and \(y > z\) then \(x > z\), 
+
+\begin{equation}
+|a-b| < \varepsilon
+\end{equation}
+Since the proof is an if and only if, we must prove the problem in the reverse direction. This would mean if \(\varepsilon > 0\) and \(|a-b|<\varepsilon\) then \(a=b\) for every real number. We will start with the knowledge that an absolute value of anything must be greater or equal to zero.
+
+\begin{equation}
+% * <asper@utexas.edu> 2015-10-05T22:19:28.193Z:
+%
+% 
+%
+|a-b| \geq 0
+\end{equation}
+This branches into two cases. \newline
+
+Suppose \(|a-b| = 0\), then we can use the definition of absolute value to show this,
+
+\begin{equation}
+a-b = 0
+\end{equation}
+Using additive inverse and equality axioms,
+
+\begin{equation}
+a=b
+\end{equation}
+
+Suppose \(|a-b| > 0\), this means there exists a number in between the absolute value and zero. Let's call this \(\varepsilon\) as \(\varepsilon\) can be any number above zero. This would give us, 
+
+\begin{equation}
+|a-b| \geq \varepsilon
+\end{equation}
+
+which contradicts the given that \(|a-b| < \varepsilon\). This means that this case could not be true with the given, therefore the only viable case would be that \(|a-b| = 0\).
+
+\end{proof}
+
+\paragraph{Conclusion:} Throughout the paper, we have proven two fundamental theorems for mathematics including the difference of two squares, which states that \((x-a)(x+a) = {x}^{2} - {a}^{2} \). The other theorem we proved shows that if two variables are equal to each other, the absolute value of their difference must be zero and that if \(\varepsilon\) is greater than zero, then the absolute value of the difference must be less than $\varepsilon$.
+
+Some of the applications of the difference of squares includes factorization of polynomials, mental math, rationalizing denominators, and sum of two squares in the complex plane. The method of using difference of two squares to help find solutions for the sum of two squares goes as follows:
+
+\begin{proof}
+Given \({x}^{2} + 13\), we can factor out a negative one from the \(13\),
+\begin{equation}
+x^2 - (-1)(13)
+\end{equation}
+Then we can substitute in \(i^2\) in for 1,
+
+\begin{equation}
+x^2 - 13i^2
+\end{equation}
+To rearrange it in the form of difference of two squares, we square root the left-variable and move the exponent outside the parenthesis as shown, 
+
+\begin{equation}
+x^2 - (\sqrt[]{13} i)^2
+\end{equation}
+Therefore the factors are, 
+
+\begin{equation}
+(x-\sqrt[]{13}i)(x+\sqrt[]{13}i)
+\end{equation}
+
+\end{proof}
+
+The other proof, absolute value epsilon proof, is used to setup a basic definition of a limit later in mathematics. The definition itself is called the epsilon-delta definition of a limit as it is built upon the original proof show in the paper. The epsilon-delta limit was not available to Netwon or Leibniz during their time, but in the 19th century mathematicians started using the definition to help further their arguments in calculus when trying to solve limits. \cite{bruce1}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{bruce1}
+ Pourciau, B. (2001). Newton and the Notion of Limit. \emph{Historia Mathematica}, 28(1).
+
+\end{thebibliography}
+
+\end{document}
