@@ -301,4 +301,14 @@ TSWLatexianTemp*
 #*Notes.bib
 *.pdf
 
-*.DS_store
+# macOS
+.DS_Store
+*.DS_Store
+
+# IDE and editor configs
+.claude/
+.vscode/
+.idea/
+
+# Generated files from tcolorbox savelowerto
+*_ex.tex
